@@ -1427,7 +1427,7 @@ section.bl-expand .bl-icon-close {
 .next {
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: #111111;
+  background-color: #999797;
 }
 
 .home:hover {
@@ -1436,7 +1436,7 @@ section.bl-expand .bl-icon-close {
   -ms-transition: all 0.6s ease-in;
   -o-transition: all 0.6s ease-in;
   transition: all 0.6s ease-in;
-  background-color: #1d1d1d;
+  background-color: #7e7979;
 }
 
 .next:hover {
@@ -1464,8 +1464,8 @@ section.bl-expand .bl-icon-close {
 
 .button .home,
 .next {
-  width: auto;
-  height: auto;
+  width: 100px;
+  height: 100px;
 }
 
 .ft-project {

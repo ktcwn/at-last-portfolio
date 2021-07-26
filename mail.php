@@ -1,13 +1,21 @@
 <?php
+    if(isset($_POST['email']) && ($_POST['email']) != ''){
 
-$recepient = "ktcwn.dev@gmail.com";
-$sitename = "Katie Cowan Portfolio";
-
-$name = trim($_POST["name"]);
-$phone = trim($_POST["phone"]);
-$text = trim($_POST["text"]);
-$message = "Name: $name \nEmail: $phone \nMessage: $text";
-
-
-$pagetitle = "New Message From \"$sitename\"";
-mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
+        if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $message = $_POST['message'];
+        
+            $to = "ktcwn.dev@gmail.com";
+            $body = " ";
+        
+            $body .= "From: ".$name. "\r\n";
+            $body .= "Email: ".$email. "\r\n";
+            $body .= "Message: ".$message. "\r\n";
+        
+            mail($to,$body); 
+        
+            $message_sent = true;
+        }
+    }
+?>
